@@ -4,17 +4,24 @@
     <title>BUYSELL</title>
 </head>
 <body>
+<<<<<<< HEAD
 <h1>BUYSELL</h1>
 <hr>
+=======
+<h1>BUYSELL</h1><hr>
+>>>>>>> d4ea42b75cec86a30116a12fb6907119171c636c
 <#if user.email??>
 <h3>Имя пользователя: <i>${user.name}</i></h3>
 <form action="/logout" method="post">
     <input type="hidden" name="_csrf" value="${_csrf.token}">
     <input type="submit" value="Выйти"/>
 </form>
+<<<<<<< HEAD
 <#if user.isAdmin()>
 <a href="/admin">Панель администратора</a>
 </#if>
+=======
+>>>>>>> d4ea42b75cec86a30116a12fb6907119171c636c
 <#else>
 <a href="/login">Войти</a></h1>
 </#if>

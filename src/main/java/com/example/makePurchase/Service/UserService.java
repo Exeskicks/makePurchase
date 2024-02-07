@@ -8,6 +8,7 @@ import lombok.extern.slf4j.Slf4j;
 import org.springframework.security.crypto.password.PasswordEncoder;
 import org.springframework.stereotype.Service;
 
+<<<<<<< HEAD
 import java.util.Arrays;
 import java.util.List;
 import java.util.Map;
@@ -20,6 +21,8 @@ import java.util.Map;
 import java.util.Set;
 import java.util.stream.Collectors;
 
+=======
+>>>>>>> d4ea42b75cec86a30116a12fb6907119171c636c
 @Service
 @Slf4j
 @RequiredArgsConstructor
@@ -38,6 +41,7 @@ public class UserService {
         return true;
     }
 
+<<<<<<< HEAD
     public List<User> list() {
         return userRepository.findAll();
     }
@@ -68,4 +72,6 @@ public class UserService {
         }
         userRepository.save(user);
     }
+=======
+>>>>>>> d4ea42b75cec86a30116a12fb6907119171c636c
 }

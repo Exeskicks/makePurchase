@@ -13,6 +13,11 @@ import java.util.*;
 @Entity
 @Table(name = "users")
 @Data
+<<<<<<< HEAD
+=======
+@AllArgsConstructor
+@NoArgsConstructor
+>>>>>>> d4ea42b75cec86a30116a12fb6907119171c636c
 public class User implements UserDetails {
     @Id
     @GeneratedValue(strategy = GenerationType.IDENTITY)
@@ -33,12 +38,19 @@ public class User implements UserDetails {
             joinColumns = @JoinColumn(name = "user_id"))
     @Enumerated(EnumType.STRING)
     private Set<Role> roles = new HashSet<>();
+<<<<<<< HEAD
     @OneToMany(cascade = CascadeType.REMOVE, fetch = FetchType.LAZY, mappedBy = "user")
     private List<Product> products = new ArrayList<>();
 
     public boolean isAdmin(){
         return roles.contains(Role.ROLE_ADMIN);
     }
+=======
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER, mappedBy = "user")
+    private List<Product> products = new ArrayList<>();
+
+
+>>>>>>> d4ea42b75cec86a30116a12fb6907119171c636c
 
     // security
 

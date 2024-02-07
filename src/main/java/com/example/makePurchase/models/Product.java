@@ -38,18 +38,12 @@ public class Product {
     private int price;
     @Column(name = "city")
     private String city;
-    @Column(name = "author")
-    private String author;
-    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.EAGER,
+    @OneToMany(cascade = CascadeType.ALL, fetch = FetchType.LAZY,
             mappedBy = "product")
     private List<Image> images = new ArrayList<>();
-    private Long preview_image_id;
-    //private LocalDateTime dateOfCreated;
-
-    //@PrePersist
-    //private void init() {
-    //   dateOfCreated = LocalDateTime.now();
-    //}
+    private Long previewImageId;
+    @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
+    private User user;
 
 
     public void addImageToProduct(Image image) {

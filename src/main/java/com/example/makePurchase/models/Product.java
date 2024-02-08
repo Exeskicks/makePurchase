@@ -42,12 +42,8 @@ public class Product {
             mappedBy = "product")
     private List<Image> images = new ArrayList<>();
     private Long previewImageId;
-<<<<<<< HEAD
-    @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.EAGER)
-=======
     @ManyToOne(cascade = CascadeType.REFRESH, fetch = FetchType.LAZY)
     @JoinColumn
->>>>>>> d4ea42b75cec86a30116a12fb6907119171c636c
     private User user;
 
 
